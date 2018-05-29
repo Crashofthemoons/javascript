@@ -31,4 +31,4 @@ const changeCampaignState = (key, value) => {
     elizSangerCampaign[key] = String(value);
     return changeCampaignState;
 }
-console.log(changeCampaignState(elizSangerCampaign[0], "6"));
+console.log(changeCampaignState(elizSangerCampaign[congressionalDistrict], "6"));
