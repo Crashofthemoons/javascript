@@ -41,8 +41,10 @@ console.log(elizSangerCampaign.calendar)
 const article = document.createElement('article');
 article.setAttribute("id", "fifth");
 
-const district = document.createTextNode(elizSangerCampaign.congressionalDistrict);
-article.appendChild(district)
+// for (mainKey in elizSangerCampaign) {
+// const district = document.createTextNode(` ${mainKey}: ${elizSangerCampaign[mainKey]} `);
+// article.appendChild(district)
+// }
 
 for (key in elizSangerCampaign) {
     if (key === "platformStatements") {
@@ -57,17 +59,17 @@ for (key in elizSangerCampaign) {
     }
 }
 
-for (key in elizSangerCampaign) {
-    if (key === "volunteerInfo") {
-        let divVolunteer= document.createElement('div')
+// for (key in elizSangerCampaign) {
+//     if (key === "volunteerInfo") {
+//         let divVolunteer= document.createElement('div')
         
-        for (volunteerInfo in elizSangerCampaign[key]) {
-            let vInfo = document.createElement('p')
-            vInfo.textContent = `${volunteerInfo}: ${elizSangerCampaign[key][volunteerInfo]}`
-            divVolunteer.appendChild(vInfo)
-        }
-        article.appendChild(divVolunteer)
-    }
-}
+//         for (volunteerInfo in elizSangerCampaign[key]) {
+//             let vInfo = document.createElement('p')
+//             vInfo.textContent = `${volunteerInfo}: ${elizSangerCampaign[key][volunteerInfo]}`
+//             divVolunteer.appendChild(vInfo)
+//         }
+//         article.appendChild(divVolunteer)
+//     }
+// }
 
 document.querySelector("#section").append(article);
